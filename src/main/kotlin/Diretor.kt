@@ -1,8 +1,9 @@
-class Gerente(
+class Diretor(
     name: String,
     cpf: String,
     salary: Double,
-    val password: Int
+    val password: Int,
+    val plr: Double
 ) : Funcionario(
     name = name,
     cpf = cpf,
@@ -11,10 +12,10 @@ class Gerente(
 
     override val bonificacao: Double
         get() {
-            return salary * 0.2
+            return salary * 0.3
         }
 
-    fun autencicacao(password: Int): Boolean {
+    fun autenticacao(password: Int): Boolean {
         if (this.password == password) {
             return true
         }

@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
 
     //testaComportamentoConta()
 
@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     println("cpf ${alex.cpf}")
     println("salario ${alex.salary}")
 
-    println("bonificação ${alex.bonificacao()}")
+    println("bonificação ${alex.bonificacao}")
 
     val fran = Gerente(
         name = "Fran",
@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
     println("cpf ${fran.cpf}")
     println("salario ${fran.salary}")
 
-    println("bonificação ${fran.bonificacao()}")
+    println("bonificação ${fran.bonificacao}")
 
     if (fran.autencicacao(password = 3232)) {
         println("Acesso concedido")
@@ -33,5 +33,24 @@ fun main(args: Array<String>) {
         println("Acesso negado")
     }
 
+    val bia = Diretor(
+        name = "Bianca",
+        cpf = "111.222.333-44",
+        salary = 12500.0,
+        password = 3322,
+        plr = 200.0
+    )
+
+    println("nome ${bia.name}")
+    println("cpf ${bia.cpf}")
+    println("salario ${bia.salary}")
+
+    println("bonificação ${bia.bonificacao}")
+
+    if (bia.autenticacao(password = 3232)) {
+        println("Acesso concedido")
+    } else {
+        println("Acesso negado")
+    }
 
 }
